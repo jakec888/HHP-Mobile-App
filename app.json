@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HPP Mobile App",
-    "slug": "HHP-Mobile-App",
+    "name": "HHP",
+    "slug": "HHP",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
