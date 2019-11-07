@@ -1,16 +1,18 @@
-import React, {Component} from 'react';
-import {AppLoading} from 'expo';
-import {FontAwesome} from '@expo/vector-icons';
-import {Asset} from 'expo-asset';
+import React, { Component } from 'react';
+import { AppLoading } from 'expo';
+import { FontAwesome } from '@expo/vector-icons';
+import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
-import {Image} from 'react-native';
+import { Image } from 'react-native';
 
 import Root from './Root';
 
-import Home from './screens/Home';
+// import Home from './screens/Home';
+// import HomeScreen from './screens/HomeScreen/index';
+import AppNavigation from './navigation/AppNaviagtion';
 
 function cacheImages(images) {
-  return images.map(image => {
+  return images.map((image) => {
     if (typeof image === 'string') {
       return Image.prefetch(image);
     } else {
@@ -20,23 +22,23 @@ function cacheImages(images) {
 }
 
 function cacheFonts(fonts) {
-  return fonts.map(font =>
+  return fonts.map((font) =>
     Font.loadAsync({
       Roboto: require('native-base/Fonts/Roboto.ttf'),
-      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-    }),
+      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf')
+    })
   );
 }
 
 export default class App extends Component {
   state = {
-    isReady: false,
+    isReady: false
   };
 
   async _loadAssetsAsync() {
     const imageAssets = cacheImages([
       'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-      require('./assets/splash.png'),
+      require('./assets/splash.png')
     ]);
 
     const fontAssets = cacheFonts([FontAwesome.font]);
@@ -49,24 +51,22 @@ export default class App extends Component {
       return (
         <AppLoading
           startAsync={this._loadAssetsAsync}
-          onFinish={() => this.setState({isReady: true})}
+          onFinish={() => this.setState({ isReady: true })}
           onError={console.warn}
         />
       );
     }
 
+    // return (
+    //   <Root>
+    //     <Home />
+    //   </Root>
+    // );
+
     return (
       <Root>
-        <Home />
+        <AppNavigation />
       </Root>
     );
   }
 }
-
-// export default function App() {
-//   return (
-//     <Root>
-//       <Home />
-//     </Root>
-//   );
-// }
