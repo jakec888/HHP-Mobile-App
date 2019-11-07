@@ -10,17 +10,17 @@ import Page2StackNavigator from '../screens/Page2/Page2StackNavigator'
 
 const AppDrawerNavigator = createDrawerNavigator(
   {
-    Page2: {
-      screen: Page2StackNavigator,
-      navigationOptions: {
-        drawerLabel: 'Inbox',
-        drawerIcon: <Ionicons name="md-mail-open" size={24} color="#3f51b5" />
-      }
-    },
     Page1: {
       screen: Page1StackNavigator,
       navigationOptions: {
-        drawerLabel: 'Sent',
+        drawerLabel: 'Page 1',
+        drawerIcon: <Ionicons name="md-mail-open" size={24} color="#3f51b5" />
+      }
+    },
+    Page2: {
+      screen: Page2StackNavigator,
+      navigationOptions: {
+        drawerLabel: 'Page 2',
         drawerIcon: <Ionicons name="md-send" size={24} color="#3f51b5" />
       }
     }
