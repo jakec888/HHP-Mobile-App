@@ -7,8 +7,6 @@ import { Image } from 'react-native';
 
 import Root from './Root';
 
-// import Home from './screens/Home';
-// import HomeScreen from './screens/HomeScreen/index';
 import AppNavigation from './navigation/AppNaviagtion';
 
 function cacheImages(images) {
@@ -56,12 +54,6 @@ export default class App extends Component {
         />
       );
     }
-
-    // return (
-    //   <Root>
-    //     <Home />
-    //   </Root>
-    // );
 
     return (
       <Root>
