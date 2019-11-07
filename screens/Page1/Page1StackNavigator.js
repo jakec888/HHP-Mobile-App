@@ -31,7 +31,7 @@ const Page1StackNavigator = createStackNavigator({
         android: {}
       }),
       headerStyle: {
-        backgroundColor: '#3f51b5'
+        backgroundColor: '#1B6FF0'
       },
       headerTintColor: '#fff'
     })

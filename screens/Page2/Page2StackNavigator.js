@@ -31,7 +31,7 @@ const Page2StackNavigator = createStackNavigator({
         android: {}
       }),
       headerStyle: {
-        backgroundColor: '#3f52b5'
+        backgroundColor: '#1B6FF0'
       },
       headerTintColor: '#fff'
     })
