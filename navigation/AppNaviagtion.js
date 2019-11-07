@@ -8,6 +8,8 @@ import { Ionicons } from '@expo/vector-icons'
 import Page1StackNavigator from '../screens/Page1/Page1StackNavigator'
 import Page2StackNavigator from '../screens/Page2/Page2StackNavigator'
 
+import SideBar from '../components/sidebar'
+
 const AppDrawerNavigator = createDrawerNavigator(
   {
     Page1: {
@@ -26,6 +28,7 @@ const AppDrawerNavigator = createDrawerNavigator(
     }
   },
   {
+    contentComponent: props => <SideBar {...props} />,
     contentOptions: {
       activeTintColor: '#1f285a',
       labelStyle: {
