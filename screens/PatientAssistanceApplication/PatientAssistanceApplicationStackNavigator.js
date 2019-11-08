@@ -4,13 +4,13 @@ import { Platform } from 'react-native'
 
 import { Text } from 'native-base'
 
-import Page1Screen from './Page1Screen'
+import PatientAssistanceApplicationScreen from './PatientAssistanceApplicationScreen'
 
 import NavigationDrawerStructure from '../../navigation/NavigationDrawerStructure'
 
-const Page1StackNavigator = createStackNavigator({
+const PatientAssistanceApplicationStackNavigator = createStackNavigator({
   Sent: {
-    screen: Page1Screen,
+    screen: PatientAssistanceApplicationScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: (
         <Text
@@ -38,4 +38,4 @@ const Page1StackNavigator = createStackNavigator({
   }
 })
 
-export default Page1StackNavigator
+export default PatientAssistanceApplicationStackNavigator

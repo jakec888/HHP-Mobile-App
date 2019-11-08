@@ -1,17 +1,14 @@
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
-import {
-  View,
-  Text,
-} from 'native-base'
+import { View, Text, } from 'native-base'
 
-export class Page1Screen extends Component {
+export class PatientAssistanceApplicationScreen extends Component {
   
   render () {
     return (
       <View style={styles.container}>
-      <Text>Page 1</Text>
+      <Text>Patient Assistance Application</Text>
     </View>
     )
   }
@@ -36,4 +33,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Page1Screen)
+)(PatientAssistanceApplicationScreen)
