@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-navigation';
 import { DrawerItems } from 'react-navigation-drawer';
 
-import { Image, StyleSheet, ScrollView } from 'react-native';
+import { Image, StyleSheet, ScrollView, View } from 'react-native';
 
 const CustomeSideBar = (props) => (
   <ScrollView>
@@ -10,11 +10,7 @@ const CustomeSideBar = (props) => (
       style={styles.container}
       forceInset={{ top: 'always', horizontal: 'never' }}
     >
-      <Image
-        source={{
-          uri:
-            'https://raw.githubusercontent.com/GeekyAnts/NativeBase-KitchenSink/master/assets/drawer-cover.png'
-        }}
+      <View 
         style={{
           height: 120,
           width: '100%',
@@ -22,7 +18,7 @@ const CustomeSideBar = (props) => (
         }}
       />
       <Image
-        square
+        // square
         style={{
           height: 80,
           width: 70,
@@ -30,10 +26,7 @@ const CustomeSideBar = (props) => (
           alignSelf: 'center',
           top: 65
         }}
-        source={{
-          uri:
-            'https://raw.githubusercontent.com/GeekyAnts/NativeBase-KitchenSink/master/assets/logo.png'
-        }}
+        source={require('../assets/HHP.png')}
       />
       <DrawerItems {...props} />
     </SafeAreaView>
