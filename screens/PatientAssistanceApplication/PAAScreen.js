@@ -1,25 +1,28 @@
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
-import { View, Text, } from 'native-base'
+import {
+  View,
+  Text,
+} from 'native-base'
 
-export class PatientAssistanceApplicationScreen extends Component {
+import PatientAssistanceForm from './PAAForm';
+
+export class PAAScreen extends Component {
   
   render () {
     return (
       <View style={styles.container}>
-      <Text>Patient Assistance Application</Text>
-    </View>
+        <Text>Page 2</Text>
+        <PatientAssistanceForm />
+      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    width: '95%'
   }
 });
 
@@ -33,4 +36,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PatientAssistanceApplicationScreen)
+)(PAAScreen)

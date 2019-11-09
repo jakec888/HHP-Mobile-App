@@ -5,25 +5,25 @@ import {createDrawerNavigator} from 'react-navigation-drawer';
 
 import {Ionicons} from '@expo/vector-icons';
 
-import Page1StackNavigator from '../screens/Page1/Page1StackNavigator';
+import PAAScreen from '../screens/PatientAssistanceApplication/PAAScreen';
 import Page2StackNavigator from '../screens/Page2/Page2StackNavigator';
 
 import SideBarHeader from './SideBarHeader';
 
 const AppDrawerNavigator = createDrawerNavigator(
   {
-    Page1: {
-      screen: Page1StackNavigator,
+    PAA: {
+      screen: PAAScreen,
       navigationOptions: {
-        drawerLabel: 'Page 1',
-        drawerIcon: <Ionicons name='md-mail-open' size={24} color='#1B6FF0' />,
+        drawerLabel: 'Patient Assistance',
+        drawerIcon: <Ionicons name="md-mail-open" size={24} color="#1B6FF0" />,
       },
     },
     Page2: {
       screen: Page2StackNavigator,
       navigationOptions: {
         drawerLabel: 'Page 2',
-        drawerIcon: <Ionicons name='md-send' size={24} color='#1B6FF0' />,
+        drawerIcon: <Ionicons name="md-send" size={24} color="#1B6FF0" />,
       },
     },
   },

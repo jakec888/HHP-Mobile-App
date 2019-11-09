@@ -6,23 +6,23 @@ import {
   Text,
 } from 'native-base'
 
+import PatientAssistanceForm from './PAAForm';
+
 export class Page2Screen extends Component {
   
   render () {
     return (
       <View style={styles.container}>
-      <Text>Page 2</Text>
-    </View>
+        <Text>Page 2</Text>
+        <PatientAssistanceForm />
+      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    width: '95%'
   }
 });
 

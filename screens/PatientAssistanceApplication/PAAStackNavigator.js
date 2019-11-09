@@ -4,13 +4,13 @@ import { Platform } from 'react-native'
 
 import { Text } from 'native-base'
 
-import PatientAssistanceApplicationScreen from './PatientAssistanceApplicationScreen'
+import PAAScreen from './PAAScreen'
 
 import NavigationDrawerStructure from '../../navigation/NavigationDrawerStructure'
 
-const PatientAssistanceApplicationStackNavigator = createStackNavigator({
+const PAAStackNavigator = createStackNavigator({
   Sent: {
-    screen: PatientAssistanceApplicationScreen,
+    screen: PAAScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: (
         <Text
@@ -21,7 +21,7 @@ const PatientAssistanceApplicationStackNavigator = createStackNavigator({
             color: 'white'
           }}
         >
-          Page 1
+          Page 2
         </Text>
       ),
       ...Platform.select({
@@ -38,4 +38,4 @@ const PatientAssistanceApplicationStackNavigator = createStackNavigator({
   }
 })
 
-export default PatientAssistanceApplicationStackNavigator
+export default PAAStackNavigator

@@ -1,7 +1,9 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
+import {reducer as formReducers} from 'redux-form';
 
 import sampleReducers from './reducers/sampleReducers.reducers';
 
 export const rootReducer = combineReducers({
-  Sample: sampleReducers
+  ReduxForm: formReducers,
+  Sample: sampleReducers,
 });
