@@ -21,7 +21,7 @@ const PAAStackNavigator = createStackNavigator({
             color: 'white'
           }}
         >
-          Page 2
+          Patient Assistance Application
         </Text>
       ),
       ...Platform.select({

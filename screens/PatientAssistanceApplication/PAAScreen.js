@@ -13,7 +13,6 @@ export class PAAScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text>Page 2</Text>
         <PatientAssistanceForm />
       </View>
     )
