@@ -51,7 +51,7 @@ class PatientAssistanceForm extends Component {
       <Form>
         <Field name="email" component={this.renderInput} />
         <Field name="name" component={this.renderInput} />
-        <Button block primary onPress= {reset}>
+        <Button block primary onPress={reset}>
           <Text>Submit</Text>
         </Button>
       </Form>
