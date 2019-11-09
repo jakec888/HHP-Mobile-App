@@ -5,14 +5,14 @@ import {createDrawerNavigator} from 'react-navigation-drawer';
 
 import {Ionicons} from '@expo/vector-icons';
 
-import Page2StackNavigator from '../screens/Page2/Page2StackNavigator';
+import PAAStackNavigator from '../screens/PatientAssistanceApplication/PAAStackNavigator';
 
 import SideBarHeader from './SideBarHeader';
 
 const AppDrawerNavigator = createDrawerNavigator(
   {
-    Page2: {
-      screen: Page2StackNavigator,
+    PAA: {
+      screen: PAAStackNavigator,
       navigationOptions: {
         drawerLabel: 'Page 2',
         drawerIcon: <Ionicons name="md-send" size={24} color="#1B6FF0" />,

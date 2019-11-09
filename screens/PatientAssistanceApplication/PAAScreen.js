@@ -8,7 +8,7 @@ import {
 
 import PatientAssistanceForm from './PAAForm';
 
-export class Page2Screen extends Component {
+export class PAAScreen extends Component {
   
   render () {
     return (
@@ -35,4 +35,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Page2Screen)
+)(PAAScreen)

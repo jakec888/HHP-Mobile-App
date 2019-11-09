@@ -4,13 +4,13 @@ import { Platform } from 'react-native'
 
 import { Text } from 'native-base'
 
-import Page2Screen from './Page2Screen'
+import PAAScreen from './PAAScreen'
 
 import NavigationDrawerStructure from '../../navigation/NavigationDrawerStructure'
 
-const Page2StackNavigator = createStackNavigator({
+const PAAStackNavigator = createStackNavigator({
   Sent: {
-    screen: Page2Screen,
+    screen: PAAScreen,
     navigationOptions: ({ navigation }) => ({
       headerTitle: (
         <Text
@@ -38,4 +38,4 @@ const Page2StackNavigator = createStackNavigator({
   }
 })
 
-export default Page2StackNavigator
+export default PAAStackNavigator
