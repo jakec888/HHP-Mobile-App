@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import sampleReducers from './reducers/sampleReducers.reducers';
+import ppaReducers from './reducers/ppa.reducers';
 
 export const rootReducer = combineReducers({
-  Sample: sampleReducers,
+  PPA: ppaReducers,
 });
