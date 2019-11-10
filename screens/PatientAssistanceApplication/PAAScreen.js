@@ -12,7 +12,7 @@ import {
   Text,
 } from 'native-base';
 
-import { updateName } from '../../redux/actions/ppa.actions'
+import {updateName} from '../../redux/actions/ppa.actions';
 
 export class PAAScreen extends Component {
   onChangeName = text => {
@@ -75,11 +75,11 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-  name: state.PPA.name
+  name: state.PPA.name,
 });
 
 const mapDispatchToProps = {
-  updateName: updateName
+  updateName: updateName,
 };
 
 export default connect(

@@ -1,14 +1,14 @@
-import { UPDATE_NAME } from '../actions/ppa.actions'
+import {UPDATE_NAME} from '../actions/ppa.actions';
 
 const initialState = {
-  name: ''
-}
+  name: '',
+};
 
-export default (state = initialState, { type, payload }) => {
+export default (state = initialState, {type, payload}) => {
   switch (type) {
     case UPDATE_NAME:
-      return { ...state, name: payload.name }
+      return {...state, name: payload.name};
     default:
-      return state
+      return state;
   }
-}
+};
