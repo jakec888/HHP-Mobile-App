@@ -1,14 +1,16 @@
 import React , { Component } from 'react';
-import { StyleSheet, View } from 'react-native'
-import { Form, Item, Input, Button, Label, Text } from 'native-base';
+import { Container, Item, Input, Header, Body, Content, Title, Button, Text } from 'native-base';
 import { Field,reduxForm } from 'redux-form';
 
 const validate = values => {
   const error= {};
+
   error.email= '';
   error.name= '';
+
   var ema = values.email;
   var nm = values.name;
+
   if(values.email === undefined){
     ema = '';
   }
@@ -27,48 +29,44 @@ const validate = values => {
   return error;
 };
 
-class PatientAssistanceForm extends Component {
+class SimpleForm extends Component {
   renderInput = ({ input, label, type, meta: { touched, error, warning } }) => {
-    let hasError= false;
-    let name = input.name.charAt(0).toUpperCase() + input.name.slice(1)
+    var hasError= false;
 
     if(error !== undefined){
       hasError= true;
     }
 
     return( 
-      <Item error={hasError} floatingLabel>
-        <Label>{name}</Label>
-        <Input {...input} />
+      <Item error= {hasError}>
+        <Input {...input}/>
         {hasError ? <Text>{error}</Text> : <Text />}
       </Item>
     )
   }
 
   render(){
-    const { handleSubmit, reset } = this.props;
+     const { handleSubmit, reset } = this.props;
 
     return (
-      <Form>
-        <Field name="email" component={this.renderInput} />
-        <Field name="name" component={this.renderInput} />
-        <View style={styles.buttonContainer}>
-          <Button block primary onPress={reset}>
+      <Container>
+        <Header>
+          <Body>
+            <Title>Redux Form</Title>
+          </Body>
+        </Header>
+        <Content padder>
+          <Field name="email" component={this.renderInput} />
+          <Field name="name" component={this.renderInput} />
+          <Button block primary onPress= {reset}>
             <Text>Submit</Text>
           </Button>
-        </View>
-      </Form>
+        </Content>
+      </Container>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  buttonContainer: {
-    margin: '5%'
-  }
-})
-
 export default reduxForm({
-  form: 'PatientAssistanceForm',
+  form: 'test',
   validate
-})(PatientAssistanceForm)
+})(SimpleForm)

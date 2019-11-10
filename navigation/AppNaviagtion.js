@@ -14,7 +14,7 @@ const AppDrawerNavigator = createDrawerNavigator(
     PAA: {
       screen: PAAStackNavigator,
       navigationOptions: {
-        drawerLabel: 'Patient Assistance Application',
+        drawerLabel: 'Assistance Application',
         drawerIcon: <Ionicons name="md-send" size={24} color="#1B6FF0" />,
       },
     },

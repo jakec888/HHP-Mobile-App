@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
-import {
-  View,
-  Text,
-} from 'native-base'
+import { View, Text} from 'native-base'
 
-import PatientAssistanceForm from './PAAForm';
+// import PatientAssistanceForm from './PAAForm';
+import SimpleForm from "./SimpleForm";
+// import showResults from "./showResults";
 
 export class PAAScreen extends Component {
   
   render () {
     return (
       <View style={styles.container}>
-        <PatientAssistanceForm />
+        {/* <Text>Sup!</Text> */}
+        {/* <PatientAssistanceForm /> */}
+        {/* <SimpleForm onSubmit={showResults} /> */}
+        <SimpleForm />
       </View>
     )
   }
