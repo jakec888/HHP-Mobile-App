@@ -12,11 +12,23 @@ import {
   Text,
 } from 'native-base';
 
-import {updateName} from '../../redux/actions/ppa.actions';
+import {
+  updateEmail,
+  updateFirstName,
+  updateLastName,
+} from '../../redux/actions/ppa.actions';
 
 export class PAAScreen extends Component {
-  onChangeName = text => {
-    this.props.updateName(text);
+  onChangeEmail = text => {
+    this.props.updateEmail(text);
+  };
+
+  onChangeFirstName = text => {
+    this.props.updateFirstName(text);
+  };
+
+  onChangeLastName = text => {
+    this.props.updateLastName(text);
   };
 
   onSubmitUserData = event => {
@@ -29,9 +41,24 @@ export class PAAScreen extends Component {
         <Content style={styles.container}>
           <Form>
             <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>Name</Label>
-              <Input autoCapitalize="none" onChangeText={this.onChangeName} />
+              <Label style={styles.label}>Email</Label>
+              <Input autoCapitalize="none" onChangeText={this.onChangeEmail} />
             </Item>
+            <Item floatingLabel style={styles.input}>
+              <Label style={styles.label}>First Name</Label>
+              <Input
+                autoCapitalize="none"
+                onChangeText={this.onChangeFirstName}
+              />
+            </Item>
+            <Item floatingLabel style={styles.input}>
+              <Label style={styles.label}>Last Name</Label>
+              <Input
+                autoCapitalize="none"
+                onChangeText={this.onChangeLastName}
+              />
+            </Item>
+
             <View style={styles.buttonContainer}>
               <Button
                 primary
@@ -75,11 +102,15 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-  name: state.PPA.name,
+  email: state.PPA.email,
+  first_name: state.PPA.first_name,
+  last_name: state.PPA.last_name,
 });
 
 const mapDispatchToProps = {
-  updateName: updateName,
+  updateEmail: updateEmail,
+  updateFirstName: updateFirstName,
+  updateLastName: updateLastName,
 };
 
 export default connect(

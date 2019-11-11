@@ -1,10 +1,30 @@
-export const UPDATE_NAME = 'UPDATE_NAME';
+export const UPDATE_EMAIL = 'UPDATE_EMAIL';
+export const UPDATE_FIRST_NAME = 'UPDATE_FIRST_NAME';
+export const UPDATE_LAST_NAME = 'UPDATE_LAST_NAME';
 
-export const updateName = name => {
+export const updateEmail = email => {
   return dispatch => {
     dispatch({
-      type: UPDATE_NAME,
-      payload: {name: name},
+      type: UPDATE_EMAIL,
+      payload: {email: email},
+    });
+  };
+};
+
+export const updateFirstName = first_name => {
+  return dispatch => {
+    dispatch({
+      type: UPDATE_FIRST_NAME,
+      payload: {first_name: first_name},
+    });
+  };
+};
+
+export const updateLastName = last_name => {
+  return dispatch => {
+    dispatch({
+      type: UPDATE_LAST_NAME,
+      payload: {last_name: last_name},
     });
   };
 };
