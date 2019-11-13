@@ -15,8 +15,7 @@ import {
 import {
   updateEmail,
   updateFirstName,
-  updateLastName,
-  updateApplicant
+  updateLastName
 } from "../../redux/actions/ppa.actions";
 
 export class PAA1Screen extends Component {

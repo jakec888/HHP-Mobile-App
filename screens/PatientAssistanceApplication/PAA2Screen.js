@@ -1,37 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { connect } from "react-redux";
-import {
-  Container,
-  Content,
-  Form,
-  Item,
-  Input,
-  Label,
-  Button,
-  Text
-} from "native-base";
+import { Container, Content, Form, Item, Picker } from "native-base";
 
-import {
-  updateEmail,
-  updateFirstName,
-  updateLastName,
-  updateApplicant
-} from "../../redux/actions/ppa.actions";
+import { updateApplicant } from "../../redux/actions/ppa.actions";
 
 export class PAA2Screen extends Component {
-  onChangeEmail = email => {
-    this.props.updateEmail(email);
-  };
-
-  onChangeFirstName = first_name => {
-    this.props.updateFirstName(first_name);
-  };
-
-  onChangeLastName = last_name => {
-    this.props.updateLastName(last_name);
-  };
-
   onChangeApplicant = applicant => {
     this.props.updateApplicant(applicant);
   };
@@ -46,36 +20,24 @@ export class PAA2Screen extends Component {
       <Container>
         <Content style={styles.container}>
           <Form>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>Part 2</Label>
-              <Input autoCapitalize="none" onChangeText={this.onChangeEmail} />
-            </Item>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>First Name</Label>
-              <Input
-                autoCapitalize="none"
-                onChangeText={this.onChangeFirstName}
-              />
-            </Item>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>Last Name</Label>
-              <Input
-                autoCapitalize="none"
-                onChangeText={this.onChangeLastName}
-              />
-            </Item>
-            <View style={styles.buttonContainer}>
-              <Button
-                primary
-                full
-                bordered
-                rounded
-                style={styles.button}
-                onPress={this.onSubmitUserData}
+            <Item picker>
+              <Picker
+                mode="dropdown"
+                iosIcon={<Icon name="arrow-down" />}
+                style={{ width: undefined }}
+                placeholder="Applicant"
+                placeholderStyle={{ color: "#1B6FF0" }}
+                placeholderIconColor="#1B6FF0"
+                selectedValue={this.props.applicant}
+                onValueChange={this.onChangeApplicant}
               >
-                <Text style={styles.buttonText}>Go To Part 3</Text>
-              </Button>
-            </View>
+                <Picker.Item label="Wallet" value="key0" />
+                <Picker.Item label="ATM Card" value="key1" />
+                <Picker.Item label="Debit Card" value="key2" />
+                <Picker.Item label="Credit Card" value="key3" />
+                <Picker.Item label="Net Banking" value="key4" />
+              </Picker>
+            </Item>
           </Form>
         </Content>
       </Container>
@@ -108,16 +70,10 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-  email: state.PPA.email,
-  first_name: state.PPA.first_name,
-  last_name: state.PPA.last_name,
   applicant: state.PPA.applicant
 });
 
 const mapDispatchToProps = {
-  updateEmail: updateEmail,
-  updateFirstName: updateFirstName,
-  updateLastName: updateLastName,
   updateApplicant: updateApplicant
 };
 
