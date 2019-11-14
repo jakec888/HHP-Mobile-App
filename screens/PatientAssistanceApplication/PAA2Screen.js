@@ -68,6 +68,7 @@ export class PAA2Screen extends Component {
                   </Header>
                 )}
                 mode="dropdown"
+                textStyle={{color: '#1B6FF0'}}
                 placeholder="Type Of Applicant"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
@@ -95,6 +96,7 @@ export class PAA2Screen extends Component {
                   </Header>
                 )}
                 mode="dropdown"
+                textStyle={{color: '#1B6FF0'}}
                 placeholder="Select Age"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
@@ -128,6 +130,7 @@ export class PAA2Screen extends Component {
                   </Header>
                 )}
                 mode="dropdown"
+                textStyle={{color: '#1B6FF0'}}
                 placeholder="How did you hear about us?"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
@@ -158,6 +161,7 @@ export class PAA2Screen extends Component {
                   </Header>
                 )}
                 mode="dropdown"
+                textStyle={{color: '#1B6FF0'}}
                 placeholder="Location"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
