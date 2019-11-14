@@ -31,10 +31,6 @@ export class PAA1Screen extends Component {
     this.props.updateLastName(last_name);
   };
 
-  onChangeApplicant = applicant => {
-    this.props.updateApplicant(applicant);
-  };
-
   onSubmitUserData = event => {
     // action prop to submit form
     this.props.navigation.navigate("Part2");
@@ -109,15 +105,13 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => ({
   email: state.PPA.email,
   first_name: state.PPA.first_name,
-  last_name: state.PPA.last_name,
-  applicant: state.PPA.applicant
+  last_name: state.PPA.last_name
 });
 
 const mapDispatchToProps = {
   updateEmail: updateEmail,
   updateFirstName: updateFirstName,
-  updateLastName: updateLastName,
-  updateApplicant: updateApplicant
+  updateLastName: updateLastName
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PAA1Screen);
