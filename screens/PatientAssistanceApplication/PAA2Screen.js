@@ -22,6 +22,7 @@ import {
   updateApplicant,
   updateAgeRange,
   updateLocation,
+  updateReference,
 } from '../../redux/actions/ppa.actions';
 
 export class PAA2Screen extends Component {
@@ -31,6 +32,10 @@ export class PAA2Screen extends Component {
 
   onChangeAgeRange = age => {
     this.props.updateAgeRange(age);
+  };
+
+  onChangeReference = reference => {
+    this.props.updateReference(reference);
   };
 
   onChangeLocation = location => {
@@ -123,6 +128,36 @@ export class PAA2Screen extends Component {
                   </Header>
                 )}
                 mode="dropdown"
+                placeholder="How did you hear about us?"
+                placeholderStyle={{color: '#1B6FF0'}}
+                note={false}
+                selectedValue={this.props.reference}
+                onValueChange={this.onChangeReference}>
+                <Picker.Item
+                  label="Healthcare Practitioner"
+                  value="Healthcare Practitioner"
+                />
+                <Picker.Item label="Friend/Family" value="Friend/Family" />
+                <Picker.Item label="Internet Search" value="Internet Search" />
+                <Picker.Item label="Other" value="Other" />
+              </Picker>
+            </Item>
+            <Item picker>
+              <Picker
+                renderHeader={backAction => (
+                  <Header style={{backgroundColor: '#1B6FF0'}}>
+                    <Left>
+                      <Button transparent onPress={backAction}>
+                        <Icon name="arrow-back" style={{color: '#fff'}} />
+                      </Button>
+                    </Left>
+                    <Body style={{flex: 3}}>
+                      <Title style={{color: '#fff'}}>Reference</Title>
+                    </Body>
+                    <Right />
+                  </Header>
+                )}
+                mode="dropdown"
                 placeholder="Location"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
@@ -188,12 +223,14 @@ const mapStateToProps = state => ({
   applicant: state.PPA.applicant,
   age: state.PPA.age,
   location: state.PPA.location,
+  reference: state.PPA.reference,
 });
 
 const mapDispatchToProps = {
   updateApplicant: updateApplicant,
   updateAgeRange: updateAgeRange,
   updateLocation: updateLocation,
+  updateReference: updateReference,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PAA2Screen);

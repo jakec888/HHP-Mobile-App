@@ -5,6 +5,7 @@ import {
   UPDATE_APPLICANT,
   UPDATE_AGE_RANGE,
   UPDATE_LOCATION,
+  UPDATE_REFERENCE,
 } from '../actions/ppa.actions';
 
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
   applicant: '',
   age: '',
   location: '',
+  reference: '',
 };
 
 export default (state = initialState, {type, payload}) => {
@@ -30,6 +32,8 @@ export default (state = initialState, {type, payload}) => {
       return {...state, age: payload.age};
     case UPDATE_LOCATION:
       return {...state, location: payload.location};
+    case UPDATE_REFERENCE:
+      return {...state, reference: payload.reference};
     default:
       return state;
   }

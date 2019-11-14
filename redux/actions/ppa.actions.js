@@ -4,6 +4,7 @@ export const UPDATE_LAST_NAME = 'UPDATE_LAST_NAME';
 export const UPDATE_APPLICANT = 'UPDATE_APPLICANT';
 export const UPDATE_AGE_RANGE = 'UPDATE_AGE_RANGE';
 export const UPDATE_LOCATION = 'UPDATE_LOCATION';
+export const UPDATE_REFERENCE = 'UPDATE_REFERENCE';
 
 export const updateEmail = email => {
   return dispatch => {
@@ -55,6 +56,15 @@ export const updateLocation = location => {
     dispatch({
       type: UPDATE_LOCATION,
       payload: {location: location},
+    });
+  };
+};
+
+export const updateReference = reference => {
+  return dispatch => {
+    dispatch({
+      type: UPDATE_REFERENCE,
+      payload: {reference: reference},
     });
   };
 };
