@@ -62,14 +62,14 @@ export class PAA2Screen extends Component {
                       </Button>
                     </Left>
                     <Body style={{flex: 3}}>
-                      <Title style={{color: '#fff'}}>Who are you?</Title>
+                      <Title style={{color: '#fff'}}>Applicant</Title>
                     </Body>
                     <Right />
                   </Header>
                 )}
                 mode="dropdown"
                 textStyle={{color: '#1B6FF0'}}
-                placeholder="Type Of Applicant"
+                placeholder="Who is applying?"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
                 selectedValue={this.props.applicant}
@@ -90,14 +90,14 @@ export class PAA2Screen extends Component {
                       </Button>
                     </Left>
                     <Body style={{flex: 3}}>
-                      <Title style={{color: '#fff'}}>Age Range</Title>
+                      <Title style={{color: '#fff'}}>Age</Title>
                     </Body>
                     <Right />
                   </Header>
                 )}
                 mode="dropdown"
                 textStyle={{color: '#1B6FF0'}}
-                placeholder="Select Age"
+                placeholder="How old are you?"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
                 selectedValue={this.props.age}
@@ -122,9 +122,7 @@ export class PAA2Screen extends Component {
                       </Button>
                     </Left>
                     <Body style={{flex: 3}}>
-                      <Title style={{color: '#fff'}}>
-                        Where are you located?
-                      </Title>
+                      <Title style={{color: '#fff'}}>Reference</Title>
                     </Body>
                     <Right />
                   </Header>
@@ -155,14 +153,14 @@ export class PAA2Screen extends Component {
                       </Button>
                     </Left>
                     <Body style={{flex: 3}}>
-                      <Title style={{color: '#fff'}}>Reference</Title>
+                      <Title style={{color: '#fff'}}>Location</Title>
                     </Body>
                     <Right />
                   </Header>
                 )}
                 mode="dropdown"
                 textStyle={{color: '#1B6FF0'}}
-                placeholder="Location"
+                placeholder="Where are you located?"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
                 selectedValue={this.props.location}
