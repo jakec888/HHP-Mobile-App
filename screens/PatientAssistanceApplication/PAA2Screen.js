@@ -179,6 +179,36 @@ export class PAA2Screen extends Component {
                 />
               </Picker>
             </Item>
+            <Item picker>
+              <Picker
+                renderHeader={backAction => (
+                  <Header style={{backgroundColor: '#1B6FF0'}}>
+                    <Left>
+                      <Button transparent onPress={backAction}>
+                        <Icon name="arrow-back" style={{color: '#fff'}} />
+                      </Button>
+                    </Left>
+                    <Body style={{flex: 3}}>
+                      <Title style={{color: '#fff'}}>Service</Title>
+                    </Body>
+                    <Right />
+                  </Header>
+                )}
+                mode="dropdown"
+                textStyle={{color: '#1B6FF0'}}
+                placeholder="What type of service are you requesting?"
+                placeholderStyle={{color: '#1B6FF0'}}
+                note={false}
+                selectedValue={this.props.location}
+                onValueChange={this.onChangeLocation}>
+                <Picker.Item
+                  label="Patient Advocate"
+                  value="Patient Advocate"
+                />
+                <Picker.Item label="Peer Navigator" value="Peer Navigator" />
+                <Picker.Item label="Not Sure" value="Not Sure" />
+              </Picker>
+            </Item>
           </Form>
           <View style={styles.buttonsContainer}>
             <View style={styles.buttonContainer}>
