@@ -181,18 +181,33 @@ export class PAA2Screen extends Component {
                 />
               </Picker>
             </Item>
+          </Form>
+          <View style={styles.buttonsContainer}>
             <View style={styles.buttonContainer}>
               <Button
                 primary
                 full
                 bordered
                 rounded
-                style={styles.button}
-                onPress={this.onSubmitUserData}>
-                <Text style={styles.buttonText}>Go To Part 3</Text>
+                style={styles.buttonBack}
+                onPress={() => {
+                  this.props.navigation.navigate('Part1');
+                }}>
+                <Text style={styles.buttonBackText}>Go Back</Text>
               </Button>
             </View>
-          </Form>
+            <View style={styles.buttonContainer}>
+              <Button
+                primary
+                full
+                bordered
+                rounded
+                style={styles.buttonNextText}
+                onPress={this.onSubmitUserData}>
+                <Text style={styles.buttonText}>Next</Text>
+              </Button>
+            </View>
+          </View>
         </Content>
       </Container>
     );
@@ -209,17 +224,27 @@ const styles = StyleSheet.create({
   label: {
     color: '#1B6FF0',
   },
-  buttonContainer: {
-    margin: '5%',
+  buttonsContainer: {
+    flexDirection: 'row',
   },
-  button: {
+  buttonContainer: {
+    flex: 1,
+    marginLeft: '5%',
+    marginTop: '5%',
+  },
+  buttonNext: {
     borderColor: '#1B6FF0',
     color: '#1B6FF0',
-    alignSelf: 'center',
-    width: '50%',
   },
-  buttonText: {
+  buttonBack: {
+    borderColor: '#ff0000',
+    color: '#ff0000',
+  },
+  buttonNextText: {
     color: '#1B6FF0',
+  },
+  buttonBackText: {
+    color: '#ff0000',
   },
 });
 

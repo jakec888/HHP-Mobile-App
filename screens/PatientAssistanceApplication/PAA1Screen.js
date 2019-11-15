@@ -68,7 +68,7 @@ export class PAA1Screen extends Component {
                 style={styles.button}
                 onPress={this.onSubmitUserData}
               >
-                <Text style={styles.buttonText}>Go To Part 2</Text>
+                <Text style={styles.buttonText}>Next</Text>
               </Button>
             </View>
           </Form>
