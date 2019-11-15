@@ -23,6 +23,8 @@ import {
   updateAgeRange,
   updateLocation,
   updateReference,
+  updateService,
+  updateIssue,
 } from '../../redux/actions/ppa.actions';
 
 export class PAA2Screen extends Component {
@@ -40,6 +42,14 @@ export class PAA2Screen extends Component {
 
   onChangeLocation = location => {
     this.props.updateLocation(location);
+  };
+
+  onChangeService = service => {
+    this.props.updateService(service);
+  };
+
+  onChangeIssue = issue => {
+    this.props.updateIssue(issue);
   };
 
   onSubmitUserData = event => {
@@ -199,14 +209,56 @@ export class PAA2Screen extends Component {
                 placeholder="What type of service are you requesting?"
                 placeholderStyle={{color: '#1B6FF0'}}
                 note={false}
-                selectedValue={this.props.location}
-                onValueChange={this.onChangeLocation}>
+                selectedValue={this.props.service}
+                onValueChange={this.onChangeService}>
                 <Picker.Item
                   label="Patient Advocate"
                   value="Patient Advocate"
                 />
                 <Picker.Item label="Peer Navigator" value="Peer Navigator" />
                 <Picker.Item label="Not Sure" value="Not Sure" />
+              </Picker>
+            </Item>
+            <Item picker>
+              <Picker
+                renderHeader={backAction => (
+                  <Header style={{backgroundColor: '#1B6FF0'}}>
+                    <Left>
+                      <Button transparent onPress={backAction}>
+                        <Icon name="arrow-back" style={{color: '#fff'}} />
+                      </Button>
+                    </Left>
+                    <Body style={{flex: 3}}>
+                      <Title style={{color: '#fff'}}>Issue</Title>
+                    </Body>
+                    <Right />
+                  </Header>
+                )}
+                mode="dropdown"
+                textStyle={{color: '#1B6FF0'}}
+                placeholder="What does your issue pertain to?"
+                placeholderStyle={{color: '#1B6FF0'}}
+                note={false}
+                selectedValue={this.props.issue}
+                onValueChange={this.onChangeIssue}>
+                <Picker.Item
+                  label="Diagnosed Health Condition"
+                  value="Diagnosed Health Condition"
+                />
+                <Picker.Item
+                  label="Undiagnosed Health Condition"
+                  value="Undiagnosed Health Condition"
+                />
+                <Picker.Item label="New Diagnosis" value="New Diagnosis" />
+                <Picker.Item
+                  label="Health Insurance/Financial"
+                  value="Health Insurance/Financial"
+                />
+                <Picker.Item
+                  label="Legal Assistance"
+                  value="Legal Assistance"
+                />
+                <Picker.Item label="Other" value="Other" />
               </Picker>
             </Item>
           </Form>
@@ -281,6 +333,8 @@ const mapStateToProps = state => ({
   age: state.PPA.age,
   location: state.PPA.location,
   reference: state.PPA.reference,
+  service: state.PPA.service,
+  issue: state.PPA.issue,
 });
 
 const mapDispatchToProps = {
@@ -288,6 +342,8 @@ const mapDispatchToProps = {
   updateAgeRange: updateAgeRange,
   updateLocation: updateLocation,
   updateReference: updateReference,
+  updateService: updateService,
+  updateIssue: updateIssue,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PAA2Screen);
