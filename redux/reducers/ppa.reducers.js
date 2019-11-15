@@ -8,6 +8,7 @@ import {
   UPDATE_REFERENCE,
   UPDATE_SERVICE,
   UPDATE_ISSUE,
+  UPDATE_REASON,
 } from '../actions/ppa.actions';
 
 const initialState = {
@@ -41,6 +42,8 @@ export default (state = initialState, {type, payload}) => {
       return {...state, service: payload.service};
     case UPDATE_ISSUE:
       return {...state, issue: payload.issue};
+    case UPDATE_REASON:
+      return {...state, reason: payload.reason};
     default:
       return state;
   }

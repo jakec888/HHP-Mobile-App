@@ -1,82 +1,69 @@
-import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import { connect } from "react-redux";
+import React, {Component} from 'react';
+import {StyleSheet, View} from 'react-native';
+import {connect} from 'react-redux';
 import {
   Container,
   Content,
   Form,
-  Item,
-  Input,
-  Label,
+  Textarea,
   Button,
-  Text
-} from "native-base";
+  Text,
+  Item,
+  Label,
+} from 'native-base';
 
-import {
-  updateEmail,
-  updateFirstName,
-  updateLastName,
-  updateApplicant
-} from "../../redux/actions/ppa.actions";
+import {updateReason} from '../../redux/actions/ppa.actions';
 
 export class PAA3Screen extends Component {
-  onChangeEmail = email => {
-    this.props.updateEmail(email);
-  };
-
-  onChangeFirstName = first_name => {
-    this.props.updateFirstName(first_name);
-  };
-
-  onChangeLastName = last_name => {
-    this.props.updateLastName(last_name);
-  };
-
-  onChangeApplicant = applicant => {
-    this.props.updateApplicant(applicant);
+  onChangeReason = reason => {
+    this.props.updateReason(reason);
   };
 
   onSubmitUserData = event => {
     // action prop to submit form
-    alert("Done!");
+    alert('Done!');
   };
 
   render() {
     return (
       <Container>
         <Content style={styles.container}>
-          <Form>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>Part 3</Label>
-              <Input autoCapitalize="none" onChangeText={this.onChangeEmail} />
-            </Item>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>First Name</Label>
-              <Input
-                autoCapitalize="none"
-                onChangeText={this.onChangeFirstName}
-              />
-            </Item>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>Last Name</Label>
-              <Input
-                autoCapitalize="none"
-                onChangeText={this.onChangeLastName}
-              />
-            </Item>
+          <Text style={styles.label}>
+            Please provide a brief description of why you need assistance
+          </Text>
+          <Textarea
+            rowSpan={10}
+            bordered
+            onChangeText={this.onChangeReason}
+            placeholder="Your answer"
+            style={styles.input}
+          />
+          <View style={styles.buttonsContainer}>
             <View style={styles.buttonContainer}>
               <Button
                 primary
                 full
                 bordered
                 rounded
-                style={styles.button}
-                onPress={this.onSubmitUserData}
-              >
+                style={styles.buttonBack}
+                onPress={() => {
+                  this.props.navigation.navigate('Part2');
+                }}>
+                <Text style={styles.buttonBackText}>Go Back</Text>
+              </Button>
+            </View>
+            <View style={styles.buttonContainer}>
+              <Button
+                primary
+                full
+                bordered
+                rounded
+                style={styles.buttonNextText}
+                onPress={this.onSubmitUserData}>
                 <Text style={styles.buttonText}>Submit</Text>
               </Button>
             </View>
-          </Form>
+          </View>
         </Content>
       </Container>
     );
@@ -85,40 +72,46 @@ export class PAA3Screen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: "95%"
+    width: '100%',
   },
   input: {
-    borderColor: "#1B6FF0"
+    borderColor: '#1B6FF0',
+    color: '#1B6FF0',
+    borderWidth: 5,
   },
   label: {
-    color: "#1B6FF0"
+    color: '#1B6FF0',
+    textAlign: 'center',
+  },
+  buttonsContainer: {
+    flexDirection: 'row',
   },
   buttonContainer: {
-    margin: "5%"
+    flex: 1,
+    margin: '5%',
   },
-  button: {
-    borderColor: "#1B6FF0",
-    color: "#1B6FF0",
-    alignSelf: "center",
-    width: "50%"
+  buttonNext: {
+    borderColor: '#1B6FF0',
+    color: '#1B6FF0',
   },
-  buttonText: {
-    color: "#1B6FF0"
-  }
+  buttonBack: {
+    borderColor: '#ff0000',
+    color: '#ff0000',
+  },
+  buttonNextText: {
+    color: '#1B6FF0',
+  },
+  buttonBackText: {
+    color: '#ff0000',
+  },
 });
 
 const mapStateToProps = state => ({
-  email: state.PPA.email,
-  first_name: state.PPA.first_name,
-  last_name: state.PPA.last_name,
-  applicant: state.PPA.applicant
+  reason: state.PPA.reason,
 });
 
 const mapDispatchToProps = {
-  updateEmail: updateEmail,
-  updateFirstName: updateFirstName,
-  updateLastName: updateLastName,
-  updateApplicant: updateApplicant
+  updateReason: updateReason,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PAA3Screen);

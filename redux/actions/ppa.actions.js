@@ -7,6 +7,7 @@ export const UPDATE_LOCATION = 'UPDATE_LOCATION';
 export const UPDATE_REFERENCE = 'UPDATE_REFERENCE';
 export const UPDATE_SERVICE = 'UPDATE_SERVICE';
 export const UPDATE_ISSUE = 'UPDATE_ISSUE';
+export const UPDATE_REASON = 'UPDATE_REASON';
 
 export const updateEmail = email => {
   return dispatch => {
@@ -82,6 +83,15 @@ export const updateIssue = issue => {
     dispatch({
       type: UPDATE_ISSUE,
       payload: {issue: issue},
+    });
+  };
+};
+
+export const updateReason = reason => {
+  return dispatch => {
+    dispatch({
+      type: UPDATE_REASON,
+      payload: {reason: reason},
     });
   };
 };
