@@ -1,16 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {connect} from 'react-redux';
-import {
-  Container,
-  Content,
-  Form,
-  Textarea,
-  Button,
-  Text,
-  Item,
-  Label,
-} from 'native-base';
+import {Container, Content, Textarea, Button, Text} from 'native-base';
 
 import {updateReason} from '../../redux/actions/ppa.actions';
 
@@ -37,6 +28,7 @@ export class PAA3Screen extends Component {
             onChangeText={this.onChangeReason}
             placeholder="Your answer"
             style={styles.input}
+            placeholderTextColor="#1B6FF0"
           />
           <View style={styles.buttonsContainer}>
             <View style={styles.buttonContainer}>
@@ -78,6 +70,7 @@ const styles = StyleSheet.create({
     borderColor: '#1B6FF0',
     color: '#1B6FF0',
     borderWidth: 5,
+    margin: '2%',
   },
   label: {
     color: '#1B6FF0',

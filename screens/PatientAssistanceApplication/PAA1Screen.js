@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import { connect } from "react-redux";
+import React, {Component} from 'react';
+import {StyleSheet, View} from 'react-native';
+import {connect} from 'react-redux';
 import {
   Container,
   Content,
@@ -9,14 +9,14 @@ import {
   Input,
   Label,
   Button,
-  Text
-} from "native-base";
+  Text,
+} from 'native-base';
 
 import {
   updateEmail,
   updateFirstName,
-  updateLastName
-} from "../../redux/actions/ppa.actions";
+  updateLastName,
+} from '../../redux/actions/ppa.actions';
 
 export class PAA1Screen extends Component {
   onChangeEmail = email => {
@@ -33,7 +33,7 @@ export class PAA1Screen extends Component {
 
   onSubmitUserData = event => {
     // action prop to submit form
-    this.props.navigation.navigate("Part2");
+    this.props.navigation.navigate('Part2');
   };
 
   render() {
@@ -43,20 +43,29 @@ export class PAA1Screen extends Component {
           <Form>
             <Item floatingLabel style={styles.input}>
               <Label style={styles.label}>Email</Label>
-              <Input autoCapitalize="none" onChangeText={this.onChangeEmail} />
+              <Input
+                style={{color: '#1B6FF0'}}
+                autoCapitalize="none"
+                onChangeText={this.onChangeEmail}
+                value={this.props.email}
+              />
             </Item>
             <Item floatingLabel style={styles.input}>
               <Label style={styles.label}>First Name</Label>
               <Input
+                style={{color: '#1B6FF0'}}
                 autoCapitalize="none"
                 onChangeText={this.onChangeFirstName}
+                value={this.props.first_name}
               />
             </Item>
             <Item floatingLabel style={styles.input}>
               <Label style={styles.label}>Last Name</Label>
               <Input
+                style={{color: '#1B6FF0'}}
                 autoCapitalize="none"
                 onChangeText={this.onChangeLastName}
+                value={this.props.last_name}
               />
             </Item>
             <View style={styles.buttonContainer}>
@@ -66,8 +75,7 @@ export class PAA1Screen extends Component {
                 bordered
                 rounded
                 style={styles.button}
-                onPress={this.onSubmitUserData}
-              >
+                onPress={this.onSubmitUserData}>
                 <Text style={styles.buttonText}>Next</Text>
               </Button>
             </View>
@@ -80,38 +88,38 @@ export class PAA1Screen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: "95%"
+    width: '95%',
   },
   input: {
-    borderColor: "#1B6FF0"
+    borderColor: '#1B6FF0',
   },
   label: {
-    color: "#1B6FF0"
+    color: '#1B6FF0',
   },
   buttonContainer: {
-    margin: "5%"
+    margin: '5%',
   },
   button: {
-    borderColor: "#1B6FF0",
-    color: "#1B6FF0",
-    alignSelf: "center",
-    width: "50%"
+    borderColor: '#1B6FF0',
+    color: '#1B6FF0',
+    alignSelf: 'center',
+    width: '50%',
   },
   buttonText: {
-    color: "#1B6FF0"
-  }
+    color: '#1B6FF0',
+  },
 });
 
 const mapStateToProps = state => ({
   email: state.PPA.email,
   first_name: state.PPA.first_name,
-  last_name: state.PPA.last_name
+  last_name: state.PPA.last_name,
 });
 
 const mapDispatchToProps = {
   updateEmail: updateEmail,
   updateFirstName: updateFirstName,
-  updateLastName: updateLastName
+  updateLastName: updateLastName,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PAA1Screen);

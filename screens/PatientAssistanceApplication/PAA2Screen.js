@@ -296,7 +296,7 @@ export class PAA2Screen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: '95%',
+    width: '100%',
   },
   input: {
     borderColor: '#1B6FF0',
@@ -309,8 +309,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flex: 1,
-    marginLeft: '5%',
-    marginTop: '5%',
+    margin: '5%',
   },
   buttonNext: {
     borderColor: '#1B6FF0',
