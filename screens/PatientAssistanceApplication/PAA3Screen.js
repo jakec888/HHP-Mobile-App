@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import {connect} from 'react-redux';
 import {Container, Content, Textarea, Button, Text} from 'native-base';
 
-import {updateReason} from '../../redux/actions/ppa.actions';
+import {updateReason, submitPPA} from '../../redux/actions/ppa.actions';
 
 export class PAA3Screen extends Component {
   onChangeReason = reason => {
@@ -11,8 +11,8 @@ export class PAA3Screen extends Component {
   };
 
   onSubmitUserData = event => {
-    // action prop to submit form
-    alert('Done!');
+    this.props.submitPPA();
+    alert('Submitted!');
   };
 
   render() {
@@ -26,6 +26,7 @@ export class PAA3Screen extends Component {
             rowSpan={10}
             bordered
             onChangeText={this.onChangeReason}
+            value={this.props.reason}
             placeholder="Your answer"
             style={styles.input}
             placeholderTextColor="#1B6FF0"
@@ -105,6 +106,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   updateReason: updateReason,
+  submitPPA: submitPPA,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(PAA3Screen);

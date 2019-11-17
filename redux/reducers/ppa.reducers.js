@@ -9,6 +9,7 @@ import {
   UPDATE_SERVICE,
   UPDATE_ISSUE,
   UPDATE_REASON,
+  SUBMIT_PPA,
 } from '../actions/ppa.actions';
 
 const initialState = {
@@ -17,9 +18,11 @@ const initialState = {
   last_name: '',
   applicant: '',
   age: '',
-  location: '',
   reference: '',
+  location: '',
+  service: '',
   issue: '',
+  reason: '',
 };
 
 export default (state = initialState, {type, payload}) => {
@@ -34,16 +37,30 @@ export default (state = initialState, {type, payload}) => {
       return {...state, applicant: payload.applicant};
     case UPDATE_AGE_RANGE:
       return {...state, age: payload.age};
-    case UPDATE_LOCATION:
-      return {...state, location: payload.location};
     case UPDATE_REFERENCE:
       return {...state, reference: payload.reference};
+    case UPDATE_LOCATION:
+      return {...state, location: payload.location};
     case UPDATE_SERVICE:
       return {...state, service: payload.service};
     case UPDATE_ISSUE:
       return {...state, issue: payload.issue};
     case UPDATE_REASON:
       return {...state, reason: payload.reason};
+    case SUBMIT_PPA:
+      return {
+        ...state,
+        email: payload.email,
+        first_name: payload.first_name,
+        last_name: payload.last_name,
+        applicant: payload.applicant,
+        age: payload.age,
+        reference: payload.reference,
+        location: payload.location,
+        service: payload.service,
+        issue: payload.issue,
+        reason: payload.reason,
+      };
     default:
       return state;
   }

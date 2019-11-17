@@ -8,6 +8,7 @@ export const UPDATE_REFERENCE = 'UPDATE_REFERENCE';
 export const UPDATE_SERVICE = 'UPDATE_SERVICE';
 export const UPDATE_ISSUE = 'UPDATE_ISSUE';
 export const UPDATE_REASON = 'UPDATE_REASON';
+export const SUBMIT_PPA = 'SUBMIT_PPA';
 
 export const updateEmail = email => {
   return dispatch => {
@@ -95,3 +96,19 @@ export const updateReason = reason => {
     });
   };
 };
+
+export const submitPPA = () => ({
+  type: SUBMIT_PPA,
+  payload: {
+    email: '',
+    first_name: '',
+    last_name: '',
+    applicant: '',
+    age: '',
+    reference: '',
+    location: '',
+    service: '',
+    issue: '',
+    reason: '',
+  },
+});
