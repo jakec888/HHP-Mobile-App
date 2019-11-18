@@ -1,38 +1,38 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-import { updateReason, submitPPA } from '../../redux/actions/ppa.actions'
+import {updateReason, submitPPA} from '../../redux/actions/ppa.actions';
 
-import PAA3Form from '../../views/PAA3Form'
+import PAA3Form from '../../views/PAA3Form';
 
 export class PAA3Screen extends Component {
-    onChangeReason = reason => {
-        this.props.updateReason(reason)
-    }
+  onChangeReason = reason => {
+    this.props.updateReason(reason);
+  };
 
-    onSubmitUserData = event => {
-        this.props.submitPPA()
-        alert('Submitted!')
-    }
+  onSubmitUserData = event => {
+    this.props.submitPPA();
+    alert('Submitted!');
+  };
 
-    render() {
-        return (
-            <PAA3Form
-                onChangeReason={this.onChangeReason}
-                onSubmitUserData={this.onSubmitUserData}
-                reason={this.props.reason}
-            />
-        )
-    }
+  render() {
+    return (
+      <PAA3Form
+        onChangeReason={this.onChangeReason}
+        onSubmitUserData={this.onSubmitUserData}
+        reason={this.props.reason}
+      />
+    );
+  }
 }
 
 const mapStateToProps = state => ({
-    reason: state.PPA.reason,
-})
+  reason: state.PPA.reason,
+});
 
 const mapDispatchToProps = {
-    updateReason: updateReason,
-    submitPPA: submitPPA,
-}
+  updateReason: updateReason,
+  submitPPA: submitPPA,
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(PAA3Screen)
+export default connect(mapStateToProps, mapDispatchToProps)(PAA3Screen);
