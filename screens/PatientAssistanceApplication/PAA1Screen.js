@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import PAA1Form from '../../views/PAA1Form'
-
 import {
     updateEmail,
     updateFirstName,
     updateLastName,
 } from '../../redux/actions/ppa.actions'
+
+import PAA1Form from '../../views/PAA1Form'
 
 export class PAA1Screen extends Component {
     onChangeEmail = email => {
