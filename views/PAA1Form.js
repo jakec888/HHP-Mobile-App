@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {
   Container,
@@ -11,55 +11,53 @@ import {
   Text,
 } from 'native-base';
 
-export class PAA1Form extends Component {
-  render() {
-    return (
-      <Container>
-        <Content style={styles.container}>
-          <Form>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>Email</Label>
-              <Input
-                style={{color: '#1B6FF0'}}
-                autoCapitalize="none"
-                onChangeText={this.props.onChangeEmail}
-                value={this.props.email}
-              />
-            </Item>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>First Name</Label>
-              <Input
-                style={{color: '#1B6FF0'}}
-                autoCapitalize="none"
-                onChangeText={this.props.onChangeFirstName}
-                value={this.props.first_name}
-              />
-            </Item>
-            <Item floatingLabel style={styles.input}>
-              <Label style={styles.label}>Last Name</Label>
-              <Input
-                style={{color: '#1B6FF0'}}
-                autoCapitalize="none"
-                onChangeText={this.props.onChangeLastName}
-                value={this.props.last_name}
-              />
-            </Item>
-            <View style={styles.buttonContainer}>
-              <Button
-                primary
-                full
-                bordered
-                rounded
-                style={styles.button}
-                onPress={this.props.onSubmitUserData}>
-                <Text style={styles.buttonText}>Next</Text>
-              </Button>
-            </View>
-          </Form>
-        </Content>
-      </Container>
-    );
-  }
+function PAA1Form(props) {
+  return (
+    <Container>
+      <Content style={styles.container}>
+        <Form>
+          <Item floatingLabel style={styles.input}>
+            <Label style={styles.label}>Email</Label>
+            <Input
+              style={{color: '#1B6FF0'}}
+              autoCapitalize="none"
+              onChangeText={props.onChangeEmail}
+              value={props.email}
+            />
+          </Item>
+          <Item floatingLabel style={styles.input}>
+            <Label style={styles.label}>First Name</Label>
+            <Input
+              style={{color: '#1B6FF0'}}
+              autoCapitalize="none"
+              onChangeText={props.onChangeFirstName}
+              value={props.first_name}
+            />
+          </Item>
+          <Item floatingLabel style={styles.input}>
+            <Label style={styles.label}>Last Name</Label>
+            <Input
+              style={{color: '#1B6FF0'}}
+              autoCapitalize="none"
+              onChangeText={props.onChangeLastName}
+              value={props.last_name}
+            />
+          </Item>
+          <View style={styles.buttonContainer}>
+            <Button
+              primary
+              full
+              bordered
+              rounded
+              style={styles.button}
+              onPress={props.onSubmitUserData}>
+              <Text style={styles.buttonText}>Next</Text>
+            </Button>
+          </View>
+        </Form>
+      </Content>
+    </Container>
+  );
 }
 
 const styles = StyleSheet.create({

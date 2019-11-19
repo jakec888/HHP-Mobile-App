@@ -10,6 +10,10 @@ export class PAA3Screen extends Component {
     this.props.updateReason(reason);
   };
 
+  onGoBack = event => {
+    this.props.navigation.navigate('Part2');
+  };
+
   onSubmitUserData = event => {
     this.props.submitPPA();
     alert('Submitted!');
@@ -19,6 +23,7 @@ export class PAA3Screen extends Component {
     return (
       <PAA3Form
         onChangeReason={this.onChangeReason}
+        onGoBack={this.onGoBack}
         onSubmitUserData={this.onSubmitUserData}
         reason={this.props.reason}
       />

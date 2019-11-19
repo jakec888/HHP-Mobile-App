@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-import WhatIsLupus from '../../views/WhatIsLupus'
+import WhatIsLupus from '../../views/WhatIsLupus';
 
 export class LupusScreen extends Component {
-    render() {
-        return <WhatIsLupus />
-    }
+  render() {
+    return <WhatIsLupus />;
+  }
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({});
 
-const mapDispatchToProps = {}
+const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(LupusScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(LupusScreen);

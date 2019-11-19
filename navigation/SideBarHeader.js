@@ -1,30 +1,28 @@
 import React from 'react';
-import { SafeAreaView } from 'react-navigation';
-import { DrawerItems } from 'react-navigation-drawer';
+import {SafeAreaView} from 'react-navigation';
+import {DrawerItems} from 'react-navigation-drawer';
 
-import { Image, StyleSheet, ScrollView, View } from 'react-native';
+import {Image, StyleSheet, ScrollView, View} from 'react-native';
 
-const CustomeSideBar = (props) => (
+const CustomeSideBar = props => (
   <ScrollView>
     <SafeAreaView
       style={styles.container}
-      forceInset={{ top: 'always', horizontal: 'never' }}
-    >
-      <View 
+      forceInset={{top: 'always', horizontal: 'never'}}>
+      <View
         style={{
           height: 120,
           width: '100%',
-          alignSelf: 'stretch'
+          alignSelf: 'stretch',
         }}
       />
       <Image
-        // square
         style={{
           height: 80,
           width: 70,
           position: 'absolute',
           alignSelf: 'center',
-          top: 65
+          top: 65,
         }}
         source={require('../assets/HHP.png')}
       />
@@ -35,8 +33,8 @@ const CustomeSideBar = (props) => (
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });
 
 export default CustomeSideBar;

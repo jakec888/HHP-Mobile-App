@@ -1,37 +1,37 @@
-import React from 'react'
+import React from 'react';
 
-import { createAppContainer } from 'react-navigation'
-import { createDrawerNavigator } from 'react-navigation-drawer'
+import {createAppContainer} from 'react-navigation';
+import {createDrawerNavigator} from 'react-navigation-drawer';
 
-import PAAStackNavigator from '../screens/PatientAssistanceApplication/PAAStackNavigator'
-import LupusStackNavigator from '../screens/Lupus/LupusStackNavigator'
+import PAAStackNavigator from '../screens/PatientAssistanceApplication/PAAStackNavigator';
+import LupusStackNavigator from '../screens/Lupus/LupusStackNavigator';
 
-import SideBarHeader from './SideBarHeader'
+import SideBarHeader from './SideBarHeader';
 
 const AppDrawerNavigator = createDrawerNavigator(
-    {
-        PAA: {
-            screen: PAAStackNavigator,
-            navigationOptions: {
-                drawerLabel: 'Assistance Application',
-            },
-        },
-        Lupus: {
-            screen: LupusStackNavigator,
-            navigationOptions: {
-                drawerLabel: 'Lupus',
-            },
-        },
+  {
+    PAA: {
+      screen: PAAStackNavigator,
+      navigationOptions: {
+        drawerLabel: 'Assistance Application',
+      },
     },
-    {
-        contentComponent: props => <SideBarHeader {...props} />,
-        contentOptions: {
-            activeTintColor: '#1B6FF0',
-            labelStyle: {
-                color: '#1B6FF0',
-            },
-        },
-    }
-)
+    Lupus: {
+      screen: LupusStackNavigator,
+      navigationOptions: {
+        drawerLabel: 'Lupus',
+      },
+    },
+  },
+  {
+    contentComponent: props => <SideBarHeader {...props} />,
+    contentOptions: {
+      activeTintColor: '#1B6FF0',
+      labelStyle: {
+        color: '#1B6FF0',
+      },
+    },
+  },
+);
 
-export default createAppContainer(AppDrawerNavigator)
+export default createAppContainer(AppDrawerNavigator);

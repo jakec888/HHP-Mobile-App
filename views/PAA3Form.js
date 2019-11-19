@@ -1,54 +1,50 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Container, Content, Textarea, Button, Text} from 'native-base';
 
-export class PAA3Form extends Component {
-  render() {
-    return (
-      <Container>
-        <Content style={styles.container}>
-          <Text style={styles.label}>
-            Please provide a brief description of why you need assistance
-          </Text>
-          <Textarea
-            rowSpan={10}
-            bordered
-            onChangeText={this.props.onChangeReason}
-            value={this.props.reason}
-            placeholder="Your answer"
-            style={styles.input}
-            placeholderTextColor="#1B6FF0"
-          />
-          <View style={styles.buttonsContainer}>
-            <View style={styles.buttonContainer}>
-              <Button
-                primary
-                full
-                bordered
-                rounded
-                style={styles.buttonBack}
-                onPress={() => {
-                  this.props.navigation.navigate('Part2');
-                }}>
-                <Text style={styles.buttonBackText}>Go Back</Text>
-              </Button>
-            </View>
-            <View style={styles.buttonContainer}>
-              <Button
-                primary
-                full
-                bordered
-                rounded
-                style={styles.buttonNextText}
-                onPress={this.props.onSubmitUserData}>
-                <Text style={styles.buttonText}>Submit</Text>
-              </Button>
-            </View>
+function PAA3Form(props) {
+  return (
+    <Container>
+      <Content style={styles.container}>
+        <Text style={styles.label}>
+          Please provide a brief description of why you need assistance
+        </Text>
+        <Textarea
+          rowSpan={10}
+          bordered
+          onChangeText={props.onChangeReason}
+          value={props.reason}
+          placeholder="Your answer"
+          style={styles.input}
+          placeholderTextColor="#1B6FF0"
+        />
+        <View style={styles.buttonsContainer}>
+          <View style={styles.buttonContainer}>
+            <Button
+              primary
+              full
+              bordered
+              rounded
+              style={styles.buttonBack}
+              onPress={props.onGoBack}>
+              <Text style={styles.buttonBackText}>Go Back</Text>
+            </Button>
           </View>
-        </Content>
-      </Container>
-    );
-  }
+          <View style={styles.buttonContainer}>
+            <Button
+              primary
+              full
+              bordered
+              rounded
+              style={styles.buttonNextText}
+              onPress={props.onSubmitUserData}>
+              <Text style={styles.buttonText}>Submit</Text>
+            </Button>
+          </View>
+        </View>
+      </Content>
+    </Container>
+  );
 }
 
 const styles = StyleSheet.create({

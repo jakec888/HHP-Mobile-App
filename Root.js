@@ -1,23 +1,23 @@
-import React from 'react'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, combineReducers } from 'redux'
-import createSagaMiddleware from 'redux-saga'
-import ReduxThunk from 'redux-thunk'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import React from 'react';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import ReduxThunk from 'redux-thunk';
+import {composeWithDevTools} from 'redux-devtools-extension';
 
-import {rootReducer} from './redux/rootReducers'
-import rootSagas from './redux/rootSaga'
+import {rootReducer} from './redux/rootReducers';
+import rootSagas from './redux/rootSaga';
 
-export default ({ children, initialState = {} }) => {
-  const ReduxSaga = createSagaMiddleware()
+export default ({children, initialState = {}}) => {
+  const ReduxSaga = createSagaMiddleware();
 
-  const middlewares = [ReduxThunk, ReduxSaga]
+  const middlewares = [ReduxThunk, ReduxSaga];
 
-  const composeEnhancers = composeWithDevTools(applyMiddleware(...middlewares))
+  const composeEnhancers = composeWithDevTools(applyMiddleware(...middlewares));
 
-  const store = createStore(rootReducer, initialState, composeEnhancers)
+  const store = createStore(rootReducer, initialState, composeEnhancers);
 
-  ReduxSaga.run(rootSagas)
+  ReduxSaga.run(rootSagas);
 
-  return <Provider store={store}>{children}</Provider>
-}
+  return <Provider store={store}>{children}</Provider>;
+};

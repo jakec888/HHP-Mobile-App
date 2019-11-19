@@ -37,6 +37,10 @@ export class PAA2Screen extends Component {
     this.props.updateIssue(issue);
   };
 
+  onGoBack = event => {
+    this.props.navigation.navigate('Part1');
+  };
+
   onSubmitUserData = event => {
     this.props.navigation.navigate('Part3');
   };
@@ -50,6 +54,7 @@ export class PAA2Screen extends Component {
         onChangeLocation={this.onChangeLocation}
         onChangeService={this.onChangeService}
         onChangeIssue={this.onChangeIssue}
+        onGoBack={this.onGoBack}
         onSubmitUserData={this.onSubmitUserData}
         applicant={this.props.applicant}
         age={this.props.age}
