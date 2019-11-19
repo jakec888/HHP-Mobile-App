@@ -3,7 +3,6 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {Platform} from 'react-native';
 
 import {Title, Subtitle, View} from 'native-base';
-import {Ionicons} from '@expo/vector-icons';
 
 import PAA1Screen from './PAA1Screen';
 import PAA2Screen from './PAA2Screen';
