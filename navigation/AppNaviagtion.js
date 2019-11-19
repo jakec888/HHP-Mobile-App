@@ -5,6 +5,7 @@ import {createDrawerNavigator} from 'react-navigation-drawer';
 
 import PAAStackNavigator from '../screens/PatientAssistanceApplication/PAAStackNavigator';
 import LupusStackNavigator from '../screens/Lupus/LupusStackNavigator';
+import MigraineStackNavigator from '../screens/Migraine/MigraineStackNavigator';
 
 import SideBarHeader from './SideBarHeader';
 
@@ -20,6 +21,12 @@ const AppDrawerNavigator = createDrawerNavigator(
       screen: LupusStackNavigator,
       navigationOptions: {
         drawerLabel: 'Lupus',
+      },
+    },
+    Migraine: {
+      screen: MigraineStackNavigator,
+      navigationOptions: {
+        drawerLabel: 'Migraine',
       },
     },
   },

@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, View, ScrollView} from 'react-native';
-import {Container, Text} from 'native-base';
+import {Container, Text, H2} from 'native-base';
 
 function WhatIsMigraine() {
   return (
     <ScrollView>
       <Container style={styles.container}>
+        <H2 style={styles.title}>What are Migraines?</H2>
         <Text style={styles.text}>
           Migraine is a primary headache disorder characterized by recurrent
           headaches that are moderate to severe. Typically, the headaches affect
@@ -32,6 +33,9 @@ function WhatIsMigraine() {
 }
 
 const styles = StyleSheet.create({
+  title: {
+    color: '#1B6FF0',
+  },
   container: {
     padding: '5%',
     marginBottom: '30%',

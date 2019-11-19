@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, View, ScrollView} from 'react-native';
-import {Container, Text} from 'native-base';
+import {Container, Text, H2} from 'native-base';
 
 function WhatIsLupus() {
   return (
     <ScrollView>
       <Container style={styles.container}>
+        <H2 style={styles.title}>What is Lupus?</H2>
         <Text style={styles.text}>
           Lupus is a systemic autoimmune disease that occurs when the body’s
           immune system attacks its own tissues and organs. Inflammation caused
@@ -56,6 +57,9 @@ function WhatIsLupus() {
 }
 
 const styles = StyleSheet.create({
+  title: {
+    color: '#1B6FF0',
+  },
   container: {
     padding: '5%',
     marginBottom: '30%',

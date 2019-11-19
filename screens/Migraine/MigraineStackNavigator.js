@@ -10,7 +10,7 @@ import NavigationDrawerStructure from '../../navigation/NavigationDrawerStructur
 
 const MigraineStackNavigator = createStackNavigator({
   Migraine: {
-    screen: MigraneScreen,
+    screen: MigraineScreen,
     navigationOptions: ({navigation}) => ({
       headerTitle: (
         <View>
