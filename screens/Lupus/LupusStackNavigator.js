@@ -2,7 +2,7 @@ import React from 'react'
 import { createStackNavigator } from 'react-navigation-stack'
 import { Platform } from 'react-native'
 
-import { Title, View } from 'native-base'
+import { H2, View } from 'native-base'
 
 import LupusScreen from './LupusScreen'
 
@@ -14,16 +14,15 @@ const LupusStackNavigator = createStackNavigator({
         navigationOptions: ({ navigation }) => ({
             headerTitle: (
                 <View>
-                    <Title
+                    <H2
                         style={{
-                            flex: 1,
                             textAlign: 'center',
                             fontWeight: 'bold',
                             color: 'white',
                         }}
                     >
                         Lupus
-                    </Title>
+                    </H2>
                 </View>
             ),
             ...Platform.select({

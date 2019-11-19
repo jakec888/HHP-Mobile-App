@@ -3,8 +3,6 @@ import React from 'react'
 import { createAppContainer } from 'react-navigation'
 import { createDrawerNavigator } from 'react-navigation-drawer'
 
-import { Ionicons } from '@expo/vector-icons'
-
 import PAAStackNavigator from '../screens/PatientAssistanceApplication/PAAStackNavigator'
 import LupusStackNavigator from '../screens/Lupus/LupusStackNavigator'
 
@@ -16,18 +14,12 @@ const AppDrawerNavigator = createDrawerNavigator(
             screen: PAAStackNavigator,
             navigationOptions: {
                 drawerLabel: 'Assistance Application',
-                drawerIcon: (
-                    <Ionicons name="md-send" size={24} color="#1B6FF0" />
-                ),
             },
         },
         Lupus: {
             screen: LupusStackNavigator,
             navigationOptions: {
                 drawerLabel: 'Lupus',
-                drawerIcon: (
-                    <Ionicons name="md-send" size={24} color="#1B6FF0" />
-                ),
             },
         },
     },
