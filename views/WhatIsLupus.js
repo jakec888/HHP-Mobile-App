@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: '5%',
-    marginBottom: '30%',
+    height: '100%',
   },
   text: {
     marginTop: '2%',

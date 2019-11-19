@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Image, View, ScrollView} from 'react-native';
 import {Container, Text, H2} from 'native-base';
 
-function WhatIsMigraine() {
+function AboutUs() {
   return (
     <ScrollView>
       <Container style={styles.container}>
@@ -44,7 +44,6 @@ function WhatIsMigraine() {
           underserved and vulnerable population groups, as well as the elderly
           and their caregivers.
         </Text>
-
         <H2 style={styles.title}>Patient-Centered Healthcare</H2>
         <Text style={styles.text}>
           HHP supports the patient empowerment movement and e-patient
@@ -53,7 +52,6 @@ function WhatIsMigraine() {
           health information, education, and support are empowered to make
           informed health decisions for themselves and those in their care.
         </Text>
-
         <H2 style={styles.title}>Peer-Led Patient Advocacy</H2>
         <Text style={styles.text}>
           Peer-Led patient advocacy is about supporting people who are not being
@@ -62,7 +60,6 @@ function WhatIsMigraine() {
           resources, advocates inspire patients to have confidence and take
           ownership in their care plan.
         </Text>
-
         <H2 style={styles.title}>Health Information Access</H2>
         <Text style={styles.text}>
           We believe people have a right to accurate and unbiased information
@@ -72,7 +69,6 @@ function WhatIsMigraine() {
           individual regardless of geographic location, social class, or
           financial position.
         </Text>
-
         <H2 style={styles.title}>
           Local Partnerships & Volunteer Opportunities
         </H2>
@@ -97,8 +93,8 @@ const styles = StyleSheet.create({
     color: '#1B6FF0',
   },
   container: {
+    height: '100%',
     padding: '5%',
-    marginBottom: '30%',
   },
   text: {
     marginTop: '2%',
@@ -110,4 +106,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default WhatIsMigraine;
+export default AboutUs;
