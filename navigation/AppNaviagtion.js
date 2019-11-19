@@ -4,6 +4,7 @@ import {createAppContainer} from 'react-navigation';
 import {createDrawerNavigator} from 'react-navigation-drawer';
 
 import PAAStackNavigator from '../screens/PatientAssistanceApplication/PAAStackNavigator';
+import AboutUsStackNavigator from '../screens/AboutUs/AboutUsStackNavigator';
 import LupusStackNavigator from '../screens/Lupus/LupusStackNavigator';
 import MigraineStackNavigator from '../screens/Migraine/MigraineStackNavigator';
 
@@ -15,6 +16,12 @@ const AppDrawerNavigator = createDrawerNavigator(
       screen: PAAStackNavigator,
       navigationOptions: {
         drawerLabel: 'Assistance Application',
+      },
+    },
+    AboutUs: {
+      screen: AboutUsStackNavigator,
+      navigationOptions: {
+        drawerLabel: 'About Us',
       },
     },
     Lupus: {
