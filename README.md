@@ -11,7 +11,7 @@
 </p>
 
 
-## Peer-led Patient Advocacy
+## Peer-Led Patient Advocacy
 
 Peer-led Patient Advocacy is advocacy provided by trained volunteers who are matched to patients according to the needs of a patient and the skills of a volunteer. The service is provided free of charge, but where they are able to do so, patients are encouraged to make a small donation to help cover costs.
 
