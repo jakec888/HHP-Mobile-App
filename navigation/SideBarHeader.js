@@ -4,6 +4,12 @@ import {DrawerItems} from 'react-navigation-drawer';
 
 import {Image, StyleSheet, ScrollView, View} from 'react-native';
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
 const CustomeSideBar = props => (
   <ScrollView>
     <SafeAreaView
@@ -30,11 +36,5 @@ const CustomeSideBar = props => (
     </SafeAreaView>
   </ScrollView>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default CustomeSideBar;

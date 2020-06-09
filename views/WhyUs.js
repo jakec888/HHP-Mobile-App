@@ -1,6 +1,28 @@
 import React from 'react';
-import {StyleSheet, Image, View, ScrollView} from 'react-native';
+import {StyleSheet, ScrollView} from 'react-native';
 import {Container, Text, H2} from 'native-base';
+
+const styles = StyleSheet.create({
+  centerItem: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    color: '#1B6FF0',
+  },
+  container: {
+    padding: '5%',
+    height: '100%',
+  },
+  text: {
+    marginTop: '2%',
+    marginBottom: '2%',
+  },
+  img: {
+    width: 50,
+    height: 50,
+  },
+});
 
 function WhyUs() {
   return (
@@ -31,27 +53,5 @@ function WhyUs() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  centerItem: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    color: '#1B6FF0',
-  },
-  container: {
-    padding: '5%',
-    height: '100%',
-  },
-  text: {
-    marginTop: '2%',
-    marginBottom: '2%',
-  },
-  img: {
-    width: 50,
-    height: 50,
-  },
-});
 
 export default WhyUs;

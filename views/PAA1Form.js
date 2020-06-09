@@ -11,6 +11,30 @@ import {
   Text,
 } from 'native-base';
 
+const styles = StyleSheet.create({
+  container: {
+    width: '95%',
+  },
+  input: {
+    borderColor: '#1B6FF0',
+  },
+  label: {
+    color: '#1B6FF0',
+  },
+  buttonContainer: {
+    margin: '5%',
+  },
+  button: {
+    borderColor: '#1B6FF0',
+    color: '#1B6FF0',
+    alignSelf: 'center',
+    width: '50%',
+  },
+  buttonText: {
+    color: '#1B6FF0',
+  },
+});
+
 function PAA1Form(props) {
   return (
     <Container>
@@ -59,29 +83,5 @@ function PAA1Form(props) {
     </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    width: '95%',
-  },
-  input: {
-    borderColor: '#1B6FF0',
-  },
-  label: {
-    color: '#1B6FF0',
-  },
-  buttonContainer: {
-    margin: '5%',
-  },
-  button: {
-    borderColor: '#1B6FF0',
-    color: '#1B6FF0',
-    alignSelf: 'center',
-    width: '50%',
-  },
-  buttonText: {
-    color: '#1B6FF0',
-  },
-});
 
 export default PAA1Form;

@@ -2,6 +2,25 @@ import React from 'react';
 import {StyleSheet, View, ScrollView} from 'react-native';
 import {Container, Text, H2} from 'native-base';
 
+const styles = StyleSheet.create({
+  title: {
+    color: '#1B6FF0',
+  },
+  container: {
+    padding: '5%',
+    height: '100%',
+  },
+  text: {
+    marginTop: '2%',
+    marginBottom: '2%',
+  },
+  bullet: {
+    marginLeft: '10%',
+    marginTop: '1%',
+    marginBottom: '1%',
+  },
+});
+
 function WhatIsLupus() {
   return (
     <ScrollView>
@@ -55,24 +74,5 @@ function WhatIsLupus() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  title: {
-    color: '#1B6FF0',
-  },
-  container: {
-    padding: '5%',
-    height: '100%',
-  },
-  text: {
-    marginTop: '2%',
-    marginBottom: '2%',
-  },
-  bullet: {
-    marginLeft: '10%',
-    marginTop: '1%',
-    marginBottom: '1%',
-  },
-});
 
 export default WhatIsLupus;

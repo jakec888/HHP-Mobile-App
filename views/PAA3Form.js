@@ -2,6 +2,43 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Container, Content, Textarea, Button, Text} from 'native-base';
 
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+  },
+  input: {
+    borderColor: '#1B6FF0',
+    color: '#1B6FF0',
+    borderWidth: 5,
+    margin: '2%',
+  },
+  label: {
+    color: '#1B6FF0',
+    textAlign: 'center',
+  },
+  buttonsContainer: {
+    flexDirection: 'row',
+  },
+  buttonContainer: {
+    flex: 1,
+    margin: '5%',
+  },
+  buttonNext: {
+    borderColor: '#1B6FF0',
+    color: '#1B6FF0',
+  },
+  buttonBack: {
+    borderColor: '#ff0000',
+    color: '#ff0000',
+  },
+  buttonNextText: {
+    color: '#1B6FF0',
+  },
+  buttonBackText: {
+    color: '#ff0000',
+  },
+});
+
 function PAA3Form(props) {
   return (
     <Container>
@@ -46,42 +83,5 @@ function PAA3Form(props) {
     </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-  },
-  input: {
-    borderColor: '#1B6FF0',
-    color: '#1B6FF0',
-    borderWidth: 5,
-    margin: '2%',
-  },
-  label: {
-    color: '#1B6FF0',
-    textAlign: 'center',
-  },
-  buttonsContainer: {
-    flexDirection: 'row',
-  },
-  buttonContainer: {
-    flex: 1,
-    margin: '5%',
-  },
-  buttonNext: {
-    borderColor: '#1B6FF0',
-    color: '#1B6FF0',
-  },
-  buttonBack: {
-    borderColor: '#ff0000',
-    color: '#ff0000',
-  },
-  buttonNextText: {
-    color: '#1B6FF0',
-  },
-  buttonBackText: {
-    color: '#ff0000',
-  },
-});
 
 export default PAA3Form;

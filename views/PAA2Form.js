@@ -16,6 +16,39 @@ import {
   Title,
 } from 'native-base';
 
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+  },
+  input: {
+    borderColor: '#1B6FF0',
+  },
+  label: {
+    color: '#1B6FF0',
+  },
+  buttonsContainer: {
+    flexDirection: 'row',
+  },
+  buttonContainer: {
+    flex: 1,
+    margin: '5%',
+  },
+  buttonNext: {
+    borderColor: '#1B6FF0',
+    color: '#1B6FF0',
+  },
+  buttonBack: {
+    borderColor: '#ff0000',
+    color: '#ff0000',
+  },
+  buttonNextText: {
+    color: '#1B6FF0',
+  },
+  buttonBackText: {
+    color: '#ff0000',
+  },
+});
+
 function PAA2Form(props) {
   return (
     <Container>
@@ -243,38 +276,5 @@ function PAA2Form(props) {
     </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-  },
-  input: {
-    borderColor: '#1B6FF0',
-  },
-  label: {
-    color: '#1B6FF0',
-  },
-  buttonsContainer: {
-    flexDirection: 'row',
-  },
-  buttonContainer: {
-    flex: 1,
-    margin: '5%',
-  },
-  buttonNext: {
-    borderColor: '#1B6FF0',
-    color: '#1B6FF0',
-  },
-  buttonBack: {
-    borderColor: '#ff0000',
-    color: '#ff0000',
-  },
-  buttonNextText: {
-    color: '#1B6FF0',
-  },
-  buttonBackText: {
-    color: '#ff0000',
-  },
-});
 
 export default PAA2Form;

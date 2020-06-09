@@ -1,7 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Platform} from 'react-native';
-
 import {Title, Subtitle, View} from 'native-base';
 
 import PAA1Screen from './PAA1Screen';

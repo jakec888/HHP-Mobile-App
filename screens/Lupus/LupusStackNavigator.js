@@ -1,11 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Platform} from 'react-native';
-
 import {H2, View} from 'native-base';
 
 import LupusScreen from './LupusScreen';
-
 import NavigationDrawerStructure from '../../navigation/NavigationDrawerStructure';
 
 const LupusStackNavigator = createStackNavigator(
