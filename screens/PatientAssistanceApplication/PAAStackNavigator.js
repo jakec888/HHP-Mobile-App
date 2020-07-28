@@ -10,126 +10,126 @@ import PAA3Screen from './PAA3Screen';
 import NavigationDrawerStructure from '../../navigation/NavigationDrawerStructure';
 
 const PAAStackNavigator = createStackNavigator(
-  {
-    Part1: {
-      screen: PAA1Screen,
-      navigationOptions: ({navigation}) => ({
-        headerTitle: (
-          <View>
-            <Title
-              style={{
-                flex: 1,
-                textAlign: 'center',
-                fontWeight: 'bold',
-                color: 'white',
-              }}>
-              Patient Application
-            </Title>
-            <Subtitle
-              style={{
-                flex: 1,
-                textAlign: 'center',
-                fontWeight: 'bold',
-                color: 'white',
-              }}>
-              (1 of 3)
-            </Subtitle>
-          </View>
-        ),
-        ...Platform.select({
-          ios: {
-            headerLeft: (
-              <NavigationDrawerStructure navigationProps={navigation} />
+   {
+      Part1: {
+         screen: PAA1Screen,
+         navigationOptions: ({navigation}) => ({
+            headerTitle: (
+               <View>
+                  <Title
+                     style={{
+                        flex: 1,
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                        color: 'white',
+                     }}>
+                     Patient Application
+                  </Title>
+                  <Subtitle
+                     style={{
+                        flex: 1,
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                        color: 'white',
+                     }}>
+                     (1 of 3)
+                  </Subtitle>
+               </View>
             ),
-          },
-          android: {},
-        }),
-        headerStyle: {
-          backgroundColor: '#1B6FF0',
-        },
-        headerTintColor: '#fff',
-      }),
-    },
-    Part2: {
-      screen: PAA2Screen,
-      navigationOptions: ({navigation}) => ({
-        headerTitle: (
-          <View>
-            <Title
-              style={{
-                flex: 1,
-                textAlign: 'center',
-                fontWeight: 'bold',
-                color: 'white',
-              }}>
-              Patient Application
-            </Title>
-            <Subtitle
-              style={{
-                flex: 1,
-                textAlign: 'center',
-                fontWeight: 'bold',
-                color: 'white',
-              }}>
-              (2 of 3)
-            </Subtitle>
-          </View>
-        ),
-        ...Platform.select({
-          ios: {
-            headerLeft: (
-              <NavigationDrawerStructure navigationProps={navigation} />
+            ...Platform.select({
+               ios: {
+                  headerLeft: (
+                     <NavigationDrawerStructure navigationProps={navigation} />
+                  ),
+               },
+               android: {},
+            }),
+            headerStyle: {
+               backgroundColor: '#1B6FF0',
+            },
+            headerTintColor: '#fff',
+         }),
+      },
+      Part2: {
+         screen: PAA2Screen,
+         navigationOptions: ({navigation}) => ({
+            headerTitle: (
+               <View>
+                  <Title
+                     style={{
+                        flex: 1,
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                        color: 'white',
+                     }}>
+                     Patient Application
+                  </Title>
+                  <Subtitle
+                     style={{
+                        flex: 1,
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                        color: 'white',
+                     }}>
+                     (2 of 3)
+                  </Subtitle>
+               </View>
             ),
-          },
-          android: {},
-        }),
-        headerStyle: {
-          backgroundColor: '#1B6FF0',
-        },
-        headerTintColor: '#fff',
-      }),
-    },
-    Part3: {
-      screen: PAA3Screen,
-      navigationOptions: ({navigation}) => ({
-        headerTitle: (
-          <View>
-            <Title
-              style={{
-                flex: 1,
-                textAlign: 'center',
-                fontWeight: 'bold',
-                color: 'white',
-              }}>
-              Patient Application
-            </Title>
-            <Subtitle
-              style={{
-                flex: 1,
-                textAlign: 'center',
-                fontWeight: 'bold',
-                color: 'white',
-              }}>
-              (3 of 3)
-            </Subtitle>
-          </View>
-        ),
-        ...Platform.select({
-          ios: {
-            headerLeft: (
-              <NavigationDrawerStructure navigationProps={navigation} />
+            ...Platform.select({
+               ios: {
+                  headerLeft: (
+                     <NavigationDrawerStructure navigationProps={navigation} />
+                  ),
+               },
+               android: {},
+            }),
+            headerStyle: {
+               backgroundColor: '#1B6FF0',
+            },
+            headerTintColor: '#fff',
+         }),
+      },
+      Part3: {
+         screen: PAA3Screen,
+         navigationOptions: ({navigation}) => ({
+            headerTitle: (
+               <View>
+                  <Title
+                     style={{
+                        flex: 1,
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                        color: 'white',
+                     }}>
+                     Patient Application
+                  </Title>
+                  <Subtitle
+                     style={{
+                        flex: 1,
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                        color: 'white',
+                     }}>
+                     (3 of 3)
+                  </Subtitle>
+               </View>
             ),
-          },
-          android: {},
-        }),
-        headerStyle: {
-          backgroundColor: '#1B6FF0',
-        },
-        headerTintColor: '#fff',
-      }),
-    },
-  },
-  {headerLayoutPreset: 'center'},
+            ...Platform.select({
+               ios: {
+                  headerLeft: (
+                     <NavigationDrawerStructure navigationProps={navigation} />
+                  ),
+               },
+               android: {},
+            }),
+            headerStyle: {
+               backgroundColor: '#1B6FF0',
+            },
+            headerTintColor: '#fff',
+         }),
+      },
+   },
+   {headerLayoutPreset: 'center'},
 );
 
 export default PAAStackNavigator;

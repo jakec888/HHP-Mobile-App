@@ -1,5 +1,5 @@
-describe("Reducer Tests", () => {
-  it("hello", () => {});
+describe('Reducer Tests', () => {
+   it('hello', () => {});
 
-  it("world", () => {});
+   it('world', () => {});
 });

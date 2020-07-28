@@ -9,15 +9,15 @@ import {rootReducer} from './redux/rootReducers';
 import rootSagas from './redux/rootSaga';
 
 export default ({children, initialState = {}}) => {
-  const ReduxSaga = createSagaMiddleware();
+   const ReduxSaga = createSagaMiddleware();
 
-  const middleware = [ReduxThunk, ReduxSaga];
+   const middleware = [ReduxThunk, ReduxSaga];
 
-  const composeEnhancers = composeWithDevTools(applyMiddleware(...middleware));
+   const composeEnhancers = composeWithDevTools(applyMiddleware(...middleware));
 
-  const store = createStore(rootReducer, initialState, composeEnhancers);
+   const store = createStore(rootReducer, initialState, composeEnhancers);
 
-  ReduxSaga.run(rootSagas);
+   ReduxSaga.run(rootSagas);
 
-  return <Provider store={store}>{children}</Provider>;
+   return <Provider store={store}>{children}</Provider>;
 };

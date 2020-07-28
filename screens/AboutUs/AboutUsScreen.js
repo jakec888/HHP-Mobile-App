@@ -4,9 +4,9 @@ import {connect} from 'react-redux';
 import AboutUs from '../../views/AboutUs';
 
 export class AboutUsScreen extends Component {
-  render() {
-    return <AboutUs />;
-  }
+   render() {
+      return <AboutUs />;
+   }
 }
 
 const mapStateToProps = state => ({});

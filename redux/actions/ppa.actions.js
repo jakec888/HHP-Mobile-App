@@ -11,104 +11,104 @@ export const UPDATE_REASON = 'UPDATE_REASON';
 export const SUBMIT_PPA = 'SUBMIT_PPA';
 
 export const updateEmail = email => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_EMAIL,
-      payload: {email: email},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_EMAIL,
+         payload: {email: email},
+      });
+   };
 };
 
 export const updateFirstName = first_name => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_FIRST_NAME,
-      payload: {first_name: first_name},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_FIRST_NAME,
+         payload: {first_name: first_name},
+      });
+   };
 };
 
 export const updateLastName = last_name => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_LAST_NAME,
-      payload: {last_name: last_name},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_LAST_NAME,
+         payload: {last_name: last_name},
+      });
+   };
 };
 
 export const updateApplicant = applicant => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_APPLICANT,
-      payload: {applicant: applicant},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_APPLICANT,
+         payload: {applicant: applicant},
+      });
+   };
 };
 
 export const updateAgeRange = age => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_AGE_RANGE,
-      payload: {age: age},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_AGE_RANGE,
+         payload: {age: age},
+      });
+   };
 };
 
 export const updateLocation = location => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_LOCATION,
-      payload: {location: location},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_LOCATION,
+         payload: {location: location},
+      });
+   };
 };
 
 export const updateReference = reference => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_REFERENCE,
-      payload: {reference: reference},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_REFERENCE,
+         payload: {reference: reference},
+      });
+   };
 };
 
 export const updateService = service => {
-  return dispatch => {
-    dispatch({type: UPDATE_SERVICE, payload: {service: service}});
-  };
+   return dispatch => {
+      dispatch({type: UPDATE_SERVICE, payload: {service: service}});
+   };
 };
 
 export const updateIssue = issue => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_ISSUE,
-      payload: {issue: issue},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_ISSUE,
+         payload: {issue: issue},
+      });
+   };
 };
 
 export const updateReason = reason => {
-  return dispatch => {
-    dispatch({
-      type: UPDATE_REASON,
-      payload: {reason: reason},
-    });
-  };
+   return dispatch => {
+      dispatch({
+         type: UPDATE_REASON,
+         payload: {reason: reason},
+      });
+   };
 };
 
 export const submitPPA = () => ({
-  type: SUBMIT_PPA,
-  payload: {
-    email: '',
-    first_name: '',
-    last_name: '',
-    applicant: '',
-    age: '',
-    reference: '',
-    location: '',
-    service: '',
-    issue: '',
-    reason: '',
-  },
+   type: SUBMIT_PPA,
+   payload: {
+      email: '',
+      first_name: '',
+      last_name: '',
+      applicant: '',
+      age: '',
+      reference: '',
+      location: '',
+      service: '',
+      issue: '',
+      reason: '',
+   },
 });

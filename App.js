@@ -10,55 +10,55 @@ import Root from './Root';
 import AppNavigation from './navigation/AppNaviagtion';
 
 function cacheImages(images) {
-  return images.map(image => {
-    if (typeof image === 'string') {
-      return Image.prefetch(image);
-    } else {
-      return Asset.fromModule(image).downloadAsync();
-    }
-  });
+   return images.map(image => {
+      if (typeof image === 'string') {
+         return Image.prefetch(image);
+      } else {
+         return Asset.fromModule(image).downloadAsync();
+      }
+   });
 }
 
 function cacheFonts(fonts) {
-  return fonts.map(font =>
-    Font.loadAsync({
-      Roboto: require('native-base/Fonts/Roboto.ttf'),
-      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-    }),
-  );
+   return fonts.map(font =>
+      Font.loadAsync({
+         Roboto: require('native-base/Fonts/Roboto.ttf'),
+         Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+      }),
+   );
 }
 
 export default class App extends Component {
-  state = {
-    isReady: false,
-  };
+   state = {
+      isReady: false,
+   };
 
-  async _loadAssetsAsync() {
-    const imageAssets = cacheImages([
-      'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-      require('./assets/splash.png'),
-    ]);
+   async _loadAssetsAsync() {
+      const imageAssets = cacheImages([
+         'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+         require('./assets/splash.png'),
+      ]);
 
-    const fontAssets = cacheFonts([FontAwesome.font]);
+      const fontAssets = cacheFonts([FontAwesome.font]);
 
-    await Promise.all([...imageAssets, ...fontAssets]);
-  }
+      await Promise.all([...imageAssets, ...fontAssets]);
+   }
 
-  render() {
-    if (!this.state.isReady) {
+   render() {
+      if (!this.state.isReady) {
+         return (
+            <AppLoading
+               startAsync={this._loadAssetsAsync}
+               onFinish={() => this.setState({isReady: true})}
+               onError={console.warn}
+            />
+         );
+      }
+
       return (
-        <AppLoading
-          startAsync={this._loadAssetsAsync}
-          onFinish={() => this.setState({isReady: true})}
-          onError={console.warn}
-        />
+         <Root>
+            <AppNavigation />
+         </Root>
       );
-    }
-
-    return (
-      <Root>
-        <AppNavigation />
-      </Root>
-    );
-  }
+   }
 }

@@ -4,9 +4,9 @@ import {connect} from 'react-redux';
 import WhatIsMigraine from '../../views/WhatIsMigraine';
 
 export class MigraineScreen extends Component {
-  render() {
-    return <WhatIsMigraine />;
-  }
+   render() {
+      return <WhatIsMigraine />;
+   }
 }
 
 const mapStateToProps = state => ({});

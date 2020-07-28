@@ -4,9 +4,9 @@ import {connect} from 'react-redux';
 import WhyUs from '../../views/WhyUs';
 
 export class WhyUsScreen extends Component {
-  render() {
-    return <WhyUs />;
-  }
+   render() {
+      return <WhyUs />;
+   }
 }
 
 const mapStateToProps = state => ({});
